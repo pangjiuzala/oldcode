@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 指定输入校验规则文件的DTD信息 -->
+<!DOCTYPE validators PUBLIC 
+	"-//OpenSymphony Group//XWork Validator 1.0.3//EN"
+	"http://www.opensymphony.com/xwork/xwork-validator-1.0.3.dtd">
+<!-- 输入校验规则文件的根元素 -->
+<validators>
+	<!-- 指定username表单域的校验规则 -->
+	<field name="username">
+		<!-- 指定username必填 -->
+		<field-validator type="requiredstring">
+			<message>用户名必填！</message>
+		</field-validator>
+		<!-- username必须匹配一个正则表达式 -->
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[(\w{4,25})]]></param>
+			<message>您输入的用户名只能是字母和数字，且长度必须在4到25之间</message>
+		</field-validator>
+	</field>
+	<!-- 指定password表单域的校验规则 -->
+	<field name="password">
+		<!-- 指定password必填 -->
+		<field-validator type="requiredstring">
+			<message>密码必填！</message>
+		</field-validator>
+		<!-- password必须匹配一个正则表达式 -->
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[(\w{4,25})]]></param>
+			<message>您输入的密码只能是字母和数字，且长度必须在4到25之间</message>
+		</field-validator>
+	</field>
+	<!-- 指定vercode表单域的校验规则 -->
+	
+</validators>

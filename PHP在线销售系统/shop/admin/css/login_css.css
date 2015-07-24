@@ -1,0 +1,38 @@
+body{
+	font-family:Verdana,Arial,Helvetica,sans-serif;
+	font-size:12px;
+	background-color:#006699;
+	color:#FFFFFF;
+	margin:auto auto;
+	width:360px;
+}
+h3{
+	padding:0;
+	margin:0;
+	font-size:14px;
+	margin-top:250px;
+}
+#content p{
+	width:310px;
+}
+#content,#bottom{
+	text-align:left;
+}
+#content input{
+	border:1px solid #333333;
+	margin-left:5px;
+}
+#tips{
+	margin-left:5px;
+	font-weight:bold;
+}
+#submit input{
+	margin-left:1px;
+}
+#bottom{
+	margin-top:20px;
+	font-size:11px;
+}
+#tips_username,#tips_password{
+	color:#999999;
+}

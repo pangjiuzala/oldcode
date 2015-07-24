@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by the Middlegen Hibernate plugin 2.2
+
+    http://boss.bekk.no/boss/middlegen/
+    http://www.hibernate.org/
+-->
+
+<class 
+    name="org.ultimania.model.TXiaoshouitem" 
+    table="t_xiaoshouitem"
+    lazy="false"
+>
+
+    <id
+        name="id"
+        type="java.lang.Long"
+        column="id"
+    >
+    
+        <generator class="assigned" />
+    </id>
+
+    <property
+        name="jiage"
+        type="java.lang.String"
+        column="jiage"
+        length="255"
+    />
+    <property
+        name="shuliang"
+        type="int"
+        column="shuliang"
+        not-null="true"
+        length="10"
+    />
+
+    <!-- Associations -->
+  
+    <!-- bi-directional many-to-one association to TProduct -->
+    <many-to-one
+        name="TProduct"
+        class="org.ultimania.model.TProduct"
+        not-null="true"
+    >
+        <column name="productid" />
+    </many-to-one>
+    <!-- bi-directional many-to-one association to TXiaoshou -->
+    <many-to-one
+        name="TXiaoshou"
+        class="org.ultimania.model.TXiaoshou"
+        not-null="true"
+    >
+        <column name="xiaoshouid" />
+    </many-to-one>
+
+</class>
+</hibernate-mapping>

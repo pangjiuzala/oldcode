@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persons>
+	<person id="1">
+	    <name>金毛狮王</name>
+	    <gender>男</gender>
+	    <address>光明顶</address>
+	    <email>lion@163.com</email>
+	</person>
+	<person id="2">
+	    <name>张三丰</name>
+	    <gender>男</gender>
+	    <address>武当山</address>
+	    <email>sanfengzhang@163.com</email>
+	</person>
+	<person id="3">
+	    <name>张翠山</name>
+	    <gender>男</gender>
+	    <address>武当山</address>
+	    <email>cuishanzhang@163.com</email>
+	</person>
+	<person id="4">
+	    <name>郭靖</name>
+	    <gender>男</gender>
+	    <address>桃花岛</address>
+	    <email>guojing@163.com</email>
+	</person>
+	<person id="5">
+	    <name>黄蓉</name>
+	    <gender>女</gender>
+	    <address>桃花岛</address>
+	    <email>huangrong@163.com</email>
+	</person>
+</persons>

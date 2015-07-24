@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">XML解析</string>
+    <string name="second_select">选择登录身份</string>
+    <string name="second_stubtn">学生</string>
+    <string name="second_teabtn">教师</string>
+    <string name="second_jlbtn">经理</string>
+    <string name="second_banbtn">主任</string>
+
+</resources>

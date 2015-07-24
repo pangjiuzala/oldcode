@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by the Middlegen Hibernate plugin 2.2
+
+    http://boss.bekk.no/boss/middlegen/
+    http://www.hibernate.org/
+-->
+
+<class 
+    name="org.ultimania.model.TXiaoshou" 
+    table="t_xiaoshou"
+    lazy="false"
+>
+
+    <id
+        name="id"
+        type="java.lang.Long"
+        column="id"
+    >
+    
+        <generator class="assigned" />
+    </id>
+
+    <property
+        name="createtime"
+        type="java.sql.Timestamp"
+        column="createtime"
+    />
+    <property
+        name="info"
+        type="java.lang.String"
+        column="info"
+        length="255"
+    />
+    <property
+        name="status"
+        type="int"
+        column="status"
+        not-null="true"
+        length="10"
+    />
+    <property
+        name="xiaoshouhao"
+        type="java.lang.String"
+        column="xiaoshouhao"
+        length="255"
+    />
+    <property
+        name="xiaoshoulock"
+        type="int"
+        column="xiaoshoulock"
+        not-null="true"
+        length="10"
+    />
+    <property
+        name="zhuangtai"
+        type="java.lang.String"
+        column="zhuangtai"
+        length="255"
+    />
+    <property
+        name="zongjiange"
+        type="double"
+        column="zongjiange"
+        not-null="true"
+        length="22"
+    />
+
+    <!-- Associations -->
+  
+    <!-- bi-directional many-to-one association to TUser -->
+    <many-to-one
+        name="TUser"
+        class="org.ultimania.model.TUser"
+        not-null="true"
+    >
+        <column name="userid" />
+    </many-to-one>
+    <!-- bi-directional one-to-many association to TXiaoshouitem -->
+
+    <set
+        name="TXiaoshouitems"
+        lazy="true"
+        inverse="true"
+		cascade="all"
+
+    >
+        <key>
+            <column name="xiaoshouid" />
+        </key>
+        
+        <one-to-many 
+            class="org.ultimania.model.TXiaoshouitem"
+        />
+    </set>
+
+</class>
+</hibernate-mapping>

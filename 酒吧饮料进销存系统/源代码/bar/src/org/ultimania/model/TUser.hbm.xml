@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by the Middlegen Hibernate plugin 2.2
+
+    http://boss.bekk.no/boss/middlegen/
+    http://www.hibernate.org/
+-->
+
+<class 
+    name="org.ultimania.model.TUser" 
+    table="t_user"
+    lazy="false"
+>
+
+    <id
+        name="id"
+        type="java.lang.Long"
+        column="id"
+    >
+    
+        <generator class="assigned" />
+    </id>
+
+    <property
+        name="createtime"
+        type="java.sql.Timestamp"
+        column="createtime"
+    />
+    <property
+        name="password"
+        type="java.lang.String"
+        column="password"
+        length="255"
+    />
+    <property
+        name="role"
+        type="int"
+        column="role"
+        not-null="true"
+        length="10"
+    />
+    <property
+        name="truename"
+        type="java.lang.String"
+        column="truename"
+        length="255"
+    />
+    <property
+        name="userlock"
+        type="int"
+        column="userlock"
+        not-null="true"
+        length="10"
+    />
+    <property
+        name="username"
+        type="java.lang.String"
+        column="username"
+        length="255"
+    />
+
+    <!-- Associations -->
+  
+    <!-- bi-directional one-to-many association to TXiaoshou -->
+
+    <set
+        name="TXiaoshous"
+        lazy="true"
+        inverse="true"
+		cascade="all"
+
+    >
+        <key>
+            <column name="userid" />
+        </key>
+        
+        <one-to-many 
+            class="org.ultimania.model.TXiaoshou"
+        />
+    </set>
+
+</class>
+</hibernate-mapping>

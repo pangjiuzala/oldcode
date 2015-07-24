@@ -1,0 +1,11 @@
+bin\Debug\WindowsApplication1.exe.config
+bin\Debug\WindowsApplication1.exe
+bin\Debug\WindowsApplication1.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\WindowsApplication1.Properties.Resources.resources
+obj\Debug\WindowsApplication1.csproj.GenerateResource.Cache
+obj\Debug\WindowsApplication1.exe
+obj\Debug\WindowsApplication1.pdb
+obj\Debug\WindowsApplication1.来客登记.resources
+obj\Debug\WindowsApplication1.客房信息.resources
+obj\Debug\WindowsApplication1.退房.resources

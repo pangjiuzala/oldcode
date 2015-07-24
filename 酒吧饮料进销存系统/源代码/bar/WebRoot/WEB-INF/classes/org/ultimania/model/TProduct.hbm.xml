@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by the Middlegen Hibernate plugin 2.2
+
+    http://boss.bekk.no/boss/middlegen/
+    http://www.hibernate.org/
+-->
+
+<class 
+    name="org.ultimania.model.TProduct" 
+    table="t_product"
+    lazy="false"
+>
+
+    <id
+        name="id"
+        type="java.lang.Long"
+        column="id"
+    >
+    
+        <generator class="assigned" />
+    </id>
+
+    <property
+        name="productlock"
+        type="int"
+        column="productlock"
+        not-null="true"
+        length="10"
+    />
+    <property
+        name="shangpinhao"
+        type="java.lang.String"
+        column="shangpinhao"
+        length="255"
+    />
+    <property
+        name="shangpinname"
+        type="java.lang.String"
+        column="shangpinname"
+        length="255"
+    />
+    <property
+        name="xiaoshou"
+        type="java.lang.String"
+        column="xiaoshou"
+        length="255"
+    />
+
+    <!-- Associations -->
+  
+    <!-- bi-directional one-to-many association to TJinhuo -->
+
+    <set
+        name="TJinhuos"
+        lazy="true"
+        inverse="true"
+		cascade="all"
+
+    >
+        <key>
+            <column name="productid" />
+        </key>
+        
+        <one-to-many 
+            class="org.ultimania.model.TJinhuo"
+        />
+    </set>
+    <!-- bi-directional one-to-many association to TXiaoshouitem -->
+
+    <set
+        name="TXiaoshouitems"
+        lazy="true"
+        inverse="true"
+		cascade="all"
+
+    >
+        <key>
+            <column name="productid" />
+        </key>
+        
+        <one-to-many 
+            class="org.ultimania.model.TXiaoshouitem"
+        />
+    </set>
+    <!-- bi-directional one-to-many association to TKucun -->
+
+    <set
+        name="TKucuns"
+        lazy="true"
+        inverse="true"
+		cascade="all"
+
+    >
+        <key>
+            <column name="productid" />
+        </key>
+        
+        <one-to-many 
+            class="org.ultimania.model.TKucun"
+        />
+    </set>
+    <!-- bi-directional many-to-one association to TGongyingshang -->
+    <many-to-one
+        name="TGongyingshang"
+        class="org.ultimania.model.TGongyingshang"
+        not-null="true"
+    >
+        <column name="gongyingshangid" />
+    </many-to-one>
+
+</class>
+</hibernate-mapping>

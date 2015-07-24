@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	  package="org.crazyit.auction.client"
+	  android:versionCode="1"
+	  android:versionName="1.0">
+	<application android:icon="@drawable/icon" android:label="@string/app_name">
+		<activity android:name="com.nuc.auction.client.Login"
+				  android:label="@string/app_name">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity android:name="com.nuc.auction.client.Main"
+				  android:label="@string/app_name">
+		</activity>
+		<activity android:name="com.nuc.auction.client.ViewItem"
+				  android:label="@string/app_name">
+		</activity>
+		<activity android:name="com.nuc.auction.client.ManageKind"
+				  android:label="@string/app_name">
+		</activity>
+		<activity android:name="com.nuc.auction.client.AddKind"
+				  android:label="@string/app_name">
+		</activity>		
+		<activity android:name="com.nuc.auction.client.ManageItem"
+				  android:label="@string/app_name">
+		</activity>
+		<activity android:name="com.nuc.auction.client.AddItem"
+				  android:label="@string/app_name">
+		</activity>			
+		<activity android:name="com.nuc.auction.client.ViewBid"
+				  android:label="@string/app_name">
+		</activity>								
+		<activity android:name="com.nuc.auction.client.ChooseKind"
+				  android:label="@string/app_name">
+		</activity>
+		<activity android:name="com.nuc.auction.client.ChooseItem"
+				  android:label="@string/app_name">
+		</activity>	
+		<activity android:name="com.nuc.auction.client.AddBid"
+				  android:label="@string/app_name">
+		</activity>						
+	</application>
+
+	<!-- 授权访问网络 -->
+	<uses-permission android:name="android.permission.INTERNET"/>
+</manifest> 

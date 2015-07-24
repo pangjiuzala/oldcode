@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+    
+<hibernate-mapping>
+<!-- 
+    Created by the Middlegen Hibernate plugin 2.2
+
+    http://boss.bekk.no/boss/middlegen/
+    http://www.hibernate.org/
+-->
+
+<class 
+    name="org.ultimania.model.TGongyingshang" 
+    table="t_gongyingshang"
+    lazy="false"
+>
+
+    <id
+        name="id"
+        type="java.lang.Long"
+        column="id"
+    >
+    
+        <generator class="assigned" />
+    </id>
+
+    <property
+        name="gongyingshanglock"
+        type="int"
+        column="gongyingshanglock"
+        not-null="true"
+        length="10"
+    />
+    <property
+        name="lianxidizhi"
+        type="java.lang.String"
+        column="lianxidizhi"
+        length="255"
+    />
+    <property
+        name="lianxifangshi"
+        type="java.lang.String"
+        column="lianxifangshi"
+        length="255"
+    />
+    <property
+        name="mingzi"
+        type="java.lang.String"
+        column="mingzi"
+        length="255"
+    />
+
+    <!-- Associations -->
+  
+    <!-- bi-directional one-to-many association to TProduct -->
+
+    <set
+        name="TProducts"
+        lazy="true"
+        inverse="true"
+		cascade="all"
+
+    >
+        <key>
+            <column name="gongyingshangid" />
+        </key>
+        
+        <one-to-many 
+            class="org.ultimania.model.TProduct"
+        />
+    </set>
+
+</class>
+</hibernate-mapping>

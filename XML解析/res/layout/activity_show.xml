@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/query_beijing"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="40dip"
+            android:layout_height="22dip"
+            android:text="@string/second_select" />
+
+        <TextView
+            android:layout_width="20dip"
+            android:layout_height="22dip"
+            android:text="@string/second_stubtn" />
+
+        <TextView
+            android:layout_width="100dip"
+            android:layout_height="22dip"
+            android:text="@string/second_teabtn" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="22dip"
+            android:text="@string/second_jlbtn" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dip"
+        android:layout_gravity="center"
+        android:layout_weight="100.0"
+        android:gravity="center" >
+
+        <ListView
+            android:id="@id/android:list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:drawSelectorOnTop="false" />
+    </LinearLayout>
+
+</LinearLayout>

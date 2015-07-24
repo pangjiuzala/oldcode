@@ -1,0 +1,20 @@
+CREATE TABLE IF NOT EXISTS `dingdan` (
+  `id` int(4) NOT NULL auto_increment,
+  `dingdanhao` varchar(125) default NULL,
+  `spc` varchar(125) default NULL,
+  `slc` varchar(125) default NULL,
+  `shouhuoren` varchar(25) default NULL,
+  `sex` varchar(2) default NULL,
+  `dizhi` varchar(125) default NULL,
+  `youbian` varchar(10) default NULL,
+  `tel` varchar(25) default NULL,
+  `email` varchar(25) default NULL,
+  `shff` varchar(25) default NULL,
+  `zfff` varchar(25) default NULL,
+  `leaveword` mediumtext,
+  `time` varchar(25) default NULL,
+  `xiadanren` varchar(25) default NULL,
+  `zt` varchar(50) default NULL,
+  `total` varchar(25) default NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM;

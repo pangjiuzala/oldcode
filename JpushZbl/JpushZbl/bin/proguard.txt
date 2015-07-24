@@ -1,0 +1,33 @@
+# view AndroidManifest.xml #generated:119
+-keep class cn.jpush.android.service.AlarmReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:76
+-keep class cn.jpush.android.service.DownloadService { <init>(...); }
+
+# view AndroidManifest.xml #generated:98
+-keep class cn.jpush.android.service.PushReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:84
+-keep class cn.jpush.android.service.PushService { <init>(...); }
+
+# view AndroidManifest.xml #generated:65
+-keep class cn.jpush.android.ui.PushActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:36
+-keep class com.example.jpushdemo.ExampleApplication { <init>(...); }
+
+# view AndroidManifest.xml #generated:43
+-keep class com.example.jpushdemo.MainActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:122
+-keep class com.example.jpushdemo.MyReceiver { <init>(...); }
+
+# view AndroidManifest.xml #generated:52
+-keep class com.example.jpushdemo.PushSetActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:54
+-keep class com.example.jpushdemo.SettingActivity { <init>(...); }
+
+# view AndroidManifest.xml #generated:56
+-keep class com.example.jpushdemo.TestActivity { <init>(...); }
+

@@ -1,0 +1,12 @@
+ 确保安装了Navicat_for_MySQL_10.1.7和wampserver2.2,默认路径为C盘
+1.打开Navicat_for_MySQL_10.1.7，新建一个连接，用户名为root，密码为空。
+在数据库下新建一个数据库，命名为shop，右键单击shop，运行shop.sql文件，
+将数据库还原
+2.打开wampserver2.2，下方图标变亮说明apche已打开，将shop文件夹复制到
+C:\wamp\www目录下
+3.打开浏览器，输入http://127.0.0.1/shop/top.php，即可运行。
+4.后台管理http://127.0.0.1/shop/admin/
+，用户名和密码均为123
+里边的数据需要
+自己填充，个人建议用phpmyadmin方便一点，我也没怎么学过PHP，里边有些许错误
+请大家原谅。
